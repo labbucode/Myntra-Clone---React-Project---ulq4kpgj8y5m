@@ -15,8 +15,8 @@ export default function Products({items,setItems,search}){
             <FilterPage  items={items} setItems={setItems}/>
         </div>
            <ul className="products__container">
-            {items.map((item)=>{
-               if(search == '' ){
+            {items.map((item)=> {
+               if(search == '' ) {
                 return <li key={item.id} data-id={item.id}className="product">
                 <Link to={`products/${item.id}`}>
                 <img src={item.otherImages[0]} alt="" />
@@ -28,9 +28,9 @@ export default function Products({items,setItems,search}){
             </p>
             <div className="item__price">
              
-               <p>Rs.{item.finalPrice}</p>
-              <p style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</p>
-              <strong style={{ color: "red" }}>{item.discount} %OFF</strong>
+               <span className="item__finalprice">Rs.{item.finalPrice}</span>
+              <span className="item__strickprice" style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</span>
+              <strong style={{ color: "red" }}>({item.discount} %OFF)</strong>
             </div>
                 </Link>
            </li>

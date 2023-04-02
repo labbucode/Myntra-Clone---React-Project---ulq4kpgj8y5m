@@ -15,7 +15,7 @@ export default function SearchBar({search,setSearch}){
        }
     return (
         <form onSubmit={handleForm}>
-        <input type="text" name="search" id="search" value={search} onChange={handleSearch} placeholder="search your product"/>
+        <input className="searchBar" type="text" name="search" id="search" value={search} onChange={handleSearch} placeholder="search your product"/>
        </form>
     )
 }

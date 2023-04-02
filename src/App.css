@@ -225,3 +225,28 @@ nav{
   color: white;
   margin: 30px 5px 0 5px;
 }
+
+/* Search bar */
+
+.searchBar {
+  height: 5vh;
+  padding: 10px;
+  width: 153%;
+}
+
+/* products */
+
+.item__name{
+  color: black;
+}
+.item__desc{
+  color: #726565;
+}
+.item__finalprice{
+  color: black;
+  margin-right: 4%;
+}
+.item__strickprice{
+  color: #564444;
+  margin-right: 4%;
+}
