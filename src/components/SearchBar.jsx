@@ -5,7 +5,7 @@ import { useState } from "react"
 export default function SearchBar({search,setSearch}){
    
     function handleSearch(e){
-        setSearch(e.target.value)
+        setSearch(e.target.value.toLowerCase());
        
       
         
