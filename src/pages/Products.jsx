@@ -34,7 +34,7 @@ export default function Products({items,setItems,search}){
             </div>
                 </Link>
            </li>
-               } else if(item.name.toLowerCase().includes(search)){
+               } else if(item.name.toLowerCase().includes(search.toLowerCase())){
                 return <li key={item.id} data-id={item.id}className="product">
                 <Link to={`products/${item.id}`}>
                 <img src={item.otherImages[0]} alt="" />
