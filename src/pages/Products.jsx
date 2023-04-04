@@ -45,9 +45,14 @@ export default function Products({items,setItems,search}){
                 {item.description}
             </p>
             <p className="item__price">
-            finalPrice={item.finalPrice} 
-                            strickPrice={item.strickPrice}
-                            discount={item.discount} id={item.id}
+            <span className="item__finalprice">Rs.{item.finalPrice}</span>
+              <span className="item__strickprice" style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</span>
+              <strong style={{ color: "red" }}>({item.discount} %OFF)</strong>
+             {/* <div className="item__finalprice">finalPrice={item.finalPrice} </div>
+             <div className="item__strickprice">strickPrice={item.strickPrice}</div>
+             <strong style={{ color: "red" }}>discount={item.discount} id={item.id}</strong> */}
+             
+             
             </p>
                 </Link>
           
