@@ -155,28 +155,32 @@ nav{
 .prod-size span{
   height: 30px;
   width: 30px;
-  background: rgb(202, 175, 126);
+  background: rgb(232 227 217);
+  color: red;
   border-radius: 50%;
   display: grid;
   place-items: center;
 }
+
 .cartBtn{
  
   height: 40px;
   width: 200px;
-  background: #00FFF6;
-  border: 2px solid black;
+  background: #d62d2d;
+  color: white;
+  border: 1px solid black;
   font-size: medium;
 }
 .cartBtn:hover{
-  border: 2px solid rgb(81, 180, 35);
+  border: 2px solid rgb(237, 243, 235);
   cursor: pointer;
 }
 .prod-modal{
   display: flex;
-  height: 80vh;
-  flex-direction: column;
-  justify-content: space-evenly;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 6%;
 }
 
 
