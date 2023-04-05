@@ -23,7 +23,7 @@ function handleCart(cartData){
     return (
     
       
-        < div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        < div style={{ display: "flex", justifyContent: "center" }}>
           <div className='prod-photo'>
             <img src={clickedItem.otherImages[0]} />
             <img src={clickedItem.otherImages[1]} />
@@ -34,9 +34,9 @@ function handleCart(cartData){
     
           <div className='prod-modal'>
             <div className='prod-detail'>
-              <h3 style={{ marginBottom: "20px" }}>{clickedItem.name}</h3>
-              <em>{clickedItem.description}</em>
-              <p>Rs.{clickedItem.finalPrice}</p>
+              <h3 >{clickedItem.name}</h3>
+              <em >{clickedItem.description}</em>
+              <p style={{ marginTop: "15%" }}>Rs.{clickedItem.finalPrice}</p>
               <p style={{ textDecoration: "line-through" }}>Rs.{clickedItem.strickPrice}</p>
               <strong style={{ color: "red" }}>{clickedItem.discount} %OFF</strong>
               <p>Size chart</p>

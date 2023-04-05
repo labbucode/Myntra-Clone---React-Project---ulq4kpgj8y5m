@@ -148,11 +148,12 @@ nav{
 .prod-size{
   width: 140px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+
 
 }
 .prod-size span{
+  margin: 2%;
   height: 30px;
   width: 30px;
   background: rgb(232 227 217);
@@ -232,7 +233,7 @@ nav{
   width: 7vw;
   font-size: large;
   font-weight: 600;
-  background-color: tomato;
+  background-color: #ea405e;
   color: white;
   margin: 30px 5px 0 5px;
 }
