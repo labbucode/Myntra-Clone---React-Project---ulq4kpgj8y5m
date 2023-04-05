@@ -3,12 +3,10 @@ import Cart from "../assets/cart.png"
 import logo from "../assets/logo.png"
 import Sorting from "../components/Sorting";
 import { Link } from "react-router-dom";
-// import Searchbar from "./Components/Searchbar.jsx";
-// import CartLogo from './Components/CartLogo.jsx';
 import SearchBar from "../components/SearchBar";
-export default function Header({search,setSearch}){
+export default function Header({search,setSearch,cartItems}){
     return (
-        <header>
+        <header className="nav__header">
             <nav>
                 <div className="nav-left">
                     <div className="logo">
@@ -27,12 +25,14 @@ export default function Header({search,setSearch}){
                 {/* <Searchbar/>
                 <CartLogo/> */}
               <div className="cart__container">
+               
             <Link to={"/cart"}>
+            <div className="item__count">{cartItems.length}</div>
             <img src={Cart} alt="" />
+           
             </Link>  
                 </div> 
             </nav>
         </header>
-    )
+        )
 }
-

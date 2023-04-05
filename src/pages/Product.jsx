@@ -2,11 +2,21 @@ import { useParams } from "react-router-dom";
 import data from "../data";
 
 
-export default function Product(){
+export default function Product({cartItems,setCartItems}){
+ 
+ 
+
  const {id} = useParams()
 const clickedItem = data.find(item=>item.id === Number(id))
-function handleCart(){
-  
+function handleCart(cartData){
+  const ifExist = data.find(d=>d.id===cartData.id)
+ 
+   
+
+    setCartItems([...cartItems,cartData])
+    localStorage.setItem('datas',JSON.stringify([...cartItems,cartData]))
+ 
+
 }
  
 
@@ -39,27 +49,12 @@ function handleCart(){
             </div>
     
             <button onClick={()=>handleCart(clickedItem)} className='cartBtn'>
+             
              Add to Cart
             </button>
           </div>
         </div>
-       
-      )
-//     <div  data-id={clickedItem.id}className="clickedItem">
-   
-//     <img src={clickedItem.otherImages[0]} alt="" />
-// <p className="item__name">
-//     {clickedItem.name}
-// </p>
-// <p className="item__desc">
-//     {clickedItem.description}
-// </p>
-// <p className="item__price">
-//    <span>RS</span> {clickedItem.finalPrice}
-// </p>
-//   <button onClick={addToCart}>Add To Cart</button>
+   )
 
 
-// </div>
-
-} 
+}
