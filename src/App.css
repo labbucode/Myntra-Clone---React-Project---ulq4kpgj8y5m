@@ -69,8 +69,11 @@ nav{
 .nav-menu ul{
   list-style : none;
   display: flex;
+  gap: 2.5rem;
 }
 .nav-menu ul li{
+
+  cursor: pointer;
   padding: 0 22%;
 }
 .nav-menu ul  a{
@@ -88,7 +91,6 @@ nav{
   grid-template-columns: 1fr 5fr;
 }
 .filterSection{
-  height: 85vh;
   overflow-x: hidden;
   overflow-y: scroll;
   padding-top: 10px;
@@ -129,6 +131,12 @@ nav{
   right: 4%;
   top: 4%;
   color: red;
+}
+.emptyCart{
+  font-size: 3rem;
+  opacity: .8;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 /* Product */
@@ -250,9 +258,27 @@ nav{
 
 /* products */
 
+
+@media (max-width:700px) {
+  .products{
+    display: flex;
+    flex-direction: column;
+  }
+}
 .products__container{
+  display: grid;
   border-left: 1px solid black;
   padding: 3%;
+}
+@media (max-width: 850px) {
+  .products__container{
+  grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width: 600px) {
+  .products__container{
+  grid-template-columns: 1fr;
+  }
 }
 
 .item__name{

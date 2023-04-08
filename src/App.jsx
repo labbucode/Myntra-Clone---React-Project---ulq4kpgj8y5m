@@ -10,14 +10,14 @@ import { useState } from "react"
 function App() {
   const localCartItems = JSON.parse(localStorage.getItem('datas'))
    const [items,setItems] = useState(data)
-   const [cartItems,setCartItems] = useState(localCartItems||[]);
+   const [cartItems,setCartItems] = useState(localCartItems || []);
    console.log(localCartItems);
  
    const [search,setSearch] = useState('')
 
   return (
     <div className="App">
-      <Header search={search} setSearch={setSearch} cartItems={cartItems} />
+      <Header search={search} setSearch={setSearch} cartItems={cartItems} items={items} setItems={setItems} />
       <Routes>
       <Route path="cart"  element={<CartPage cartItems={cartItems} setCartItems={setCartItems} />} />
       <Route index element={<Products items={items} setItems={setItems} search={search} />} />

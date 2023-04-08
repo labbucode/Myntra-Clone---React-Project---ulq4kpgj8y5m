@@ -1,69 +1,66 @@
-import data from "../data";
+
 import { Link } from "react-router-dom";
 import FilterPage from "../components/FilterPage";
 import Sorting from "../components/Sorting"
 
 
-export default function Products({items,setItems,search}){
- 
+export default function Products({ items, setItems, search }) {
 
-  return (
-<>
-    <Sorting items={items}setItems={setItems}  />
-    <section className="products">
-        <div className="filter__container">
-            <FilterPage  items={items} setItems={setItems}/>
-        </div>
-           <ul className="products__container">
-            {items.map((item)=> {
-               if(search == '' ) {
-                return <li key={item.id} data-id={item.id}className="product">
-                <Link to={`products/${item.id}`}>
-                <img src={item.otherImages[0]} alt="" />
-            <p className="item__name">
-                {item.name}
-            </p>
-            <p className="item__desc">
-                {item.description}
-            </p>
-            <div className="item__price">
-             
-               <span className="item__finalprice">Rs.{item.finalPrice}</span>
-              <span className="item__strickprice" style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</span>
-              <strong style={{ color: "red" }}>({item.discount} %OFF)</strong>
-            </div>
-                </Link>
-           </li>
-               } else if(item.name.toLowerCase().includes(search.toLowerCase())){
-                return <li key={item.id} data-id={item.id}className="product">
-                <Link to={`products/${item.id}`}>
-                <img src={item.otherImages[0]} alt="" />
-            <p className="item__name">
-                {item.name}
-            </p>
-            <p className="item__desc">
-                {item.description}
-            </p>
-            <p className="item__price">
-            <span className="item__finalprice">Rs.{item.finalPrice}</span>
-              <span className="item__strickprice" style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</span>
-              <strong style={{ color: "red" }}>({item.discount} %OFF)</strong>
-             {/* <div className="item__finalprice">finalPrice={item.finalPrice} </div>
-             <div className="item__strickprice">strickPrice={item.strickPrice}</div>
-             <strong style={{ color: "red" }}>discount={item.discount} id={item.id}</strong> */}
-             
-             
-            </p>
-                </Link>
-          
-        
-           </li>
-               }
-            })}
-           
-           </ul>
-    </section>
-    </>
-    
-  )
+
+    return (
+        <>
+            <Sorting items={items} setItems={setItems} />
+            <section className="products">
+                <div className="filter__container">
+                    <FilterPage items={items} setItems={setItems} />
+                </div>
+                <ul className="products__container">
+                    {items.map((item) => {
+                        if (search == '') {
+                            return <li key={item.id} data-id={item.id} className="product">
+                                <Link to={`products/${item.id}`}>
+                                    <img src={item.otherImages[0]} alt="" />
+                                    <p className="item__name">
+                                        {item.name}
+                                    </p>
+                                    <p className="item__desc">
+                                        {item.description}
+                                    </p>
+                                    <div className="item__price">
+
+                                        <span className="item__finalprice">Rs.{item.finalPrice}</span>
+                                        <span className="item__strickprice" style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</span>
+                                        <strong style={{ color: "red" }}>({item.discount} %OFF)</strong>
+                                    </div>
+                                </Link>
+                            </li>
+                        }else if (item.name.toLowerCase().includes(search.toLowerCase())) {
+                            return <li key={item.id} data-id={item.id} className="product">
+                                <Link to={`products/${item.id}`}>
+                                    <img src={item.otherImages[0]} alt="" />
+                                    <p className="item__name">
+                                        {item.name}
+                                    </p>
+                                    <p className="item__desc">
+                                        {item.description}
+                                    </p>
+                                    <p className="item__price">
+                                        <span className="item__finalprice">Rs.{item.finalPrice}</span>
+                                        <span className="item__strickprice" style={{ textDecoration: "line-through" }}>Rs.{item.strickPrice}</span>
+                                        <strong style={{ color: "red" }}>({item.discount} %OFF)</strong>
+
+
+                                    </p>
+                                </Link>
+
+
+                            </li>
+                        }
+                    })}
+
+                </ul>
+            </section>
+        </>
+
+    )
 }

@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 const Sorting = ({items,setItems}) => {
 
-    // const [productData, setItems] = useState(items)
 
     const handleChange = (e) => {
 
@@ -17,6 +16,14 @@ const Sorting = ({items,setItems}) => {
             })
            
         }
+
+        if (e.target.value == "price-high-to-low") {
+            setItems(() => {
+                return [...items].sort((a, b) => (b.finalPrice - a.finalPrice))
+            })
+           
+        }
+
         if (e.target.value == "better-discounts") {
             setItems(() => {
                 return [...items].sort((a, b) => (b.discount - a.discount))
@@ -33,6 +40,8 @@ const Sorting = ({items,setItems}) => {
                 <option value="What-new">What's new</option>
 
                 <option value="price-low-to-high">Price low to high</option>
+                
+                <option value="price-high-to-low">Price high to low</option>
 
                 <option value="better-discounts">Better discounts</option>
 

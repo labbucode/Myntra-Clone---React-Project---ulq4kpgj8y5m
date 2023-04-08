@@ -1,15 +1,8 @@
-// import React, { useState } from 'react';
-// import Card from "./Card.jsx";
-// import './ComponentStyles/FilterPage.css';
-import data from "../data.js";
+import data from "../data";
 
 
 const FilterPage = ({items,setItems}) => {
 
-    //taking variables for data of different category
-    // const [newData, setNewData] = useState(data);
-
-    // //function to get data of gender category
     const genderCategory = (e) => {
         
         if (e.target.value === "all") {
@@ -24,8 +17,6 @@ const FilterPage = ({items,setItems}) => {
                 }
         
     }
-
-    // //function to get data of different style category
     const typeCategory = (e) => {
         if (e.target.checked === false) {
             if (e.target.value === "folded") {
@@ -49,7 +40,7 @@ const FilterPage = ({items,setItems}) => {
 
     return (
         <>
-            {/* <div className='home'> */}
+
                 <div className="filterSection">
                     <h4 className='filterheading'>FILTERS:</h4>
                     <div className="gender-category" id='gender-category'>
@@ -97,8 +88,7 @@ const FilterPage = ({items,setItems}) => {
                     </div>
                 </div>
 
-                {/* <Card newData={newData} /> */}
-            {/* </div> */}
+
         </>
     )
 }

@@ -4,7 +4,24 @@ import logo from "../assets/logo.png"
 import Sorting from "../components/Sorting";
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
-export default function Header({search,setSearch,cartItems}){
+import data from "../data";
+
+
+export default function Header({search,setSearch,cartItems,items,setItems}){
+
+    function handleCat(gender){
+        if (gender === "all") {
+            setItems(data)
+       } else{
+       
+                   setItems(data.filter((ele) => {
+                       return ele.gender === gender;
+                   }))
+       
+       
+               }
+    }
+
     return (
         <header className="nav__header">
             <nav>
@@ -14,16 +31,15 @@ export default function Header({search,setSearch,cartItems}){
                     </div>
                     <div className="nav-menu">
                         <ul>
-                            <li><a href="/">MEN</a></li>
-                            <li><a href="/">WOMEN</a></li>
-                            <li><a href="/">KID</a></li>
+                            <Link to="/"><li onClick={() => handleCat('all')}>All</li></Link>
+                            <Link to="/"><li onClick={() => handleCat('M')}>Men</li></Link>
+                            <Link to="/"><li onClick={() => handleCat('F')}>Women</li></Link>
                         </ul>
                     </div>
              
                 </div>
                 <SearchBar search={search} setSearch={setSearch} />
-                {/* <Searchbar/>
-                <CartLogo/> */}
+                
               <div className="cart__container">
                
             <Link to={"/cart"}>
