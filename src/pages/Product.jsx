@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import data from "../data";
+import "../Styles/Product.css"
 
 
 export default function Product({ cartItems, setCartItems }) {

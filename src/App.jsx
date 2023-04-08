@@ -11,7 +11,6 @@ function App() {
   const localCartItems = JSON.parse(localStorage.getItem('datas'))
    const [items,setItems] = useState(data)
    const [cartItems,setCartItems] = useState(localCartItems || []);
-   console.log(localCartItems);
  
    const [search,setSearch] = useState('')
 

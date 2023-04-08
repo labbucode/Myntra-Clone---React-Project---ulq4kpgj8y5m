@@ -1,0 +1,36 @@
+@media (max-width:700px) {
+    .products{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .products__container{
+    display: grid;
+    border-left: 1px solid black;
+    padding: 3%;
+  }
+  @media (max-width: 850px) {
+    .products__container{
+    grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .products__container{
+    grid-template-columns: 1fr;
+    }
+  }
+  
+  .item__name{
+    color: black;
+  }
+  .item__desc{
+    color: #726565;
+  }
+  .item__finalprice{
+    color: black;
+    margin-right: 4%;
+  }
+  .item__strickprice{
+    color: #564444;
+    margin-right: 4%;
+  }

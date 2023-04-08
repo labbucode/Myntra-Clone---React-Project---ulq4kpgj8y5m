@@ -1,0 +1,50 @@
+.prod-photo{
+    display: grid;
+   grid-template-columns: 150px 150px;
+   grid-template-rows: 200px 200px;
+   margin-top: 80px;
+   margin-left: 40px;
+  }
+  .prod-photo img{
+    height: 200px;
+    width: 150px;
+    padding: 3px;
+  }
+  .prod-size{
+    width: 140px;
+    display: flex;
+    justify-content: center;
+  
+  
+  }
+  .prod-size span{
+    margin: 2%;
+    height: 30px;
+    width: 30px;
+    background: rgb(232 227 217);
+    color: red;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .cartBtn{
+   
+    height: 40px;
+    width: 200px;
+    background: #d62d2d;
+    color: white;
+    border: 1px solid black;
+    font-size: medium;
+  }
+  .cartBtn:hover{
+    border: 2px solid rgb(237, 243, 235);
+    cursor: pointer;
+  }
+  .prod-modal{
+    display: flex;
+      height: 80vh;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: 6%;
+  }

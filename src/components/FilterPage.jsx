@@ -1,4 +1,5 @@
 import data from "../data";
+import "../Styles/Filter.css"
 
 
 const FilterPage = ({items,setItems}) => {

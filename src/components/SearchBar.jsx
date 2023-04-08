@@ -1,3 +1,5 @@
+import "../Styles/searchBar.css"
+
 export default function SearchBar({search,setSearch}){
    
     function handleSearch(e){
