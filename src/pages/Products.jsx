@@ -2,6 +2,7 @@ import ProductsContainer from "../components/ProductsContainer";
 import FilterPage from "../components/FilterPage";
 import Sorting from "../components/Sorting"
 import "../Styles/Products.css"
+import Footer  from "../components/Footer"
 
 
 export default function Products({ items, setItems, search }) {
@@ -17,6 +18,7 @@ export default function Products({ items, setItems, search }) {
                 </div>
                 <ProductsContainer items={items} setItems={setItems} search={search} />
             </section>
+            <Footer />
         </>
 
     )

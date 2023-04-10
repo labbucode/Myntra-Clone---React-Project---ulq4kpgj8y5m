@@ -7,6 +7,7 @@ import CartPage from "./pages/CartPage"
 import data from "./data"
 import { useState } from "react"
 
+
 function App() {
   const localCartItems = JSON.parse(localStorage.getItem('datas'))
    const [items,setItems] = useState(data)
