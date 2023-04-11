@@ -6,7 +6,6 @@
     grid-template-columns: 1fr 5fr;
   }
   .filterSection{
-    z-index: -1;
     overflow-x: hidden;
     overflow-y: scroll;
     padding-top: 10px;

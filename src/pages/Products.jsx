@@ -20,6 +20,5 @@ export default function Products({ items, setItems, search }) {
             </section>
             <Footer />
         </>
-
     )
 }
