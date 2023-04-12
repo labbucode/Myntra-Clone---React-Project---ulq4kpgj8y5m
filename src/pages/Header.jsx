@@ -26,9 +26,10 @@ export default function Header({ search, setSearch, cartItems, items, setItems }
                     </div>
                     <div className="nav-menu">
                         <ul>
-                            <Link to="/"><li onClick={() => handleCat('all')}>All</li></Link>
-                            <Link to="/"><li onClick={() => handleCat('M')}>Men</li></Link>
-                            <Link to="/"><li onClick={() => handleCat('F')}>Women</li></Link>
+                            <Link to="/"><li onClick={() => handleCat('all')}>Home</li></Link>
+                            <Link to="/products"><li onClick={() => handleCat('all')}>All </li></Link>
+                            <Link to="/products"><li onClick={() => handleCat('M')}>Men</li></Link>
+                            <Link to="/products"><li onClick={() => handleCat('F')}>Women</li></Link>
                         </ul>
                     </div>
 

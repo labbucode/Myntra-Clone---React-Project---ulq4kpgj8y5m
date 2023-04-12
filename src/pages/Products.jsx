@@ -10,14 +10,16 @@ export default function Products({ items, setItems, search }) {
 
     return (
         <>
-            <Sorting items={items} setItems={setItems} />
-            
-            <section className="products">
-                <div className="filter__container">
-                    <FilterPage items={items} setItems={setItems} />
+        <div className="hero">
+
+            <div className="filter__container">
+                <Sorting items={items} setItems={setItems} />
+                <FilterPage items={items} setItems={setItems} />
                 </div>
+            <div className="products"> 
                 <ProductsContainer items={items} setItems={setItems} search={search} />
-            </section>
+            </div>
+        </div>
             <Footer />
         </>
     )

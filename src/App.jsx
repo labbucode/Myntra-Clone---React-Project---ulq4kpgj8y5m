@@ -6,6 +6,7 @@ import Header from "./pages/Header"
 import CartPage from "./pages/CartPage"
 import data from "./data"
 import { useState } from "react"
+import HomePage from "./pages/HomePage"
 
 
 function App() {
@@ -20,9 +21,9 @@ function App() {
       <Header search={search} setSearch={setSearch} cartItems={cartItems} items={items} setItems={setItems} />
       <Routes>
       <Route path="cart"  element={<CartPage cartItems={cartItems} setCartItems={setCartItems} />} />
-      <Route index element={<Products items={items} setItems={setItems} search={search} />} />
+      <Route index element={<HomePage items={items} setItems={setItems} search={search} />} />
+      <Route path="products" element={<Products items={items} setItems={setItems} search={search} />} />
       <Route path="products/:id"  element={<Product setCartItems={setCartItems} cartItems={cartItems} />} />
-      
       </Routes>
     
     </div>

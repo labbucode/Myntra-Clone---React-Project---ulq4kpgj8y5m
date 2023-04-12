@@ -1,13 +1,9 @@
 .Footerbody{
-    background-color: rgb(222, 233, 233);
+    background-color: rgb(245 245 245);
     font-size: 100%;
 }
 
-hr{
-    width: 100%;
-    font-size: 1px;
-    margin-bottom: 2%;
-}
+
 
 .Footerclass{
     width: 70%;
@@ -48,6 +44,7 @@ hr{
 }
 .colorblack{
     color: black;
+    margin-bottom: 4%;
 }
 
 .footer4{
@@ -59,7 +56,7 @@ hr{
    
     width: 70%;
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
     padding-bottom: 2%;
     margin-left: 15%;
 }
@@ -103,9 +100,11 @@ text-align: left;
     
 .Footerclassdiv1{
     width: 45%;
+    /* line-height:13px; */
  }
  .Footerclassdiv2{
    width: 45%;
+   /* line-height:13px; */
  }
 
  .footer4{

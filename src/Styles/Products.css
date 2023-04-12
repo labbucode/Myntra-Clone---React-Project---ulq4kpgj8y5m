@@ -34,3 +34,6 @@
     color: #564444;
     margin-right: 4%;
   }
+  .hero{
+      display: flex;
+  }

@@ -33,7 +33,7 @@ const Sorting = ({items,setItems}) => {
     };
     
     return (
-        <div className='product-container'>
+        <div className='sortingContainer'>
             <span>Sort by :-
             <select  onChange={handleChange}>
 
