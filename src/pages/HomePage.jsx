@@ -3,10 +3,12 @@
  import top2 from "../assets/top2.jpg"
  import top4 from "../assets/top4.webp"
 import Footer from "../components/Footer"
+import { Link } from "react-router-dom";
 
 function HomePage() {
     return (
         <>
+        <Link to="/products">
     <div className="main">
     <section className="container section1">
     <img className="homeImg" src={top1} />
@@ -26,6 +28,7 @@ function HomePage() {
    </section>
  <img className="homeImg" src={top4} />
  </div>
+ </Link>
  <Footer/>
  </>
     )  

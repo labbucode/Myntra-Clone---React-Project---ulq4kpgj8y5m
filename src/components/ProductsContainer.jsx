@@ -5,7 +5,7 @@ export default function ProductsContainer({items,setItems,search}) {
     {items.map((item) => {
         if (search == '') {
             return <li key={item.id} data-id={item.id} className="product">
-                <Link to={`products/${item.id}`}>
+                <Link to={`${item.id}`}>
                     <img src={item.otherImages[0]} alt="" />
                     <p className="item__name">
                         {item.name}
