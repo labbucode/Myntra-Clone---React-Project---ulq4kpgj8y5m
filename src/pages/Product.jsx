@@ -15,6 +15,10 @@ export default function Product({ cartItems, setCartItems }) {
     localStorage.setItem('datas', JSON.stringify([...cartItems, cartData]))
   }
 
+  function handleSize(event){
+    return event;
+  }
+
   return (
 
     < div style={{ display: "flex", justifyContent: "center" }}>
@@ -35,10 +39,10 @@ export default function Product({ cartItems, setCartItems }) {
           <strong style={{ color: "red" }}>{clickedItem.discount} %OFF</strong>
           <p>Size chart</p>
           <span className='prod-size'>
-            <span>{clickedItem.productSize.slice(0, 2)}</span>
-            <span>{clickedItem.productSize.slice(4, 6)}</span>
-            <span>{clickedItem.productSize.slice(8, 10)}</span>
-            <span>{clickedItem.productSize.slice(12, 14)}</span>
+            <span onClick={handleSize}>{clickedItem.productSize.slice(0, 2)}</span>
+            <span onClick={handleSize}>{clickedItem.productSize.slice(4, 6)}</span>
+            <span onClick={handleSize}>{clickedItem.productSize.slice(8, 10)}</span>
+            <span onClick={handleSize}>{clickedItem.productSize.slice(12, 14)}</span>
           </span>
         </div>
 

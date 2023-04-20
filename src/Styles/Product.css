@@ -14,8 +14,7 @@
     width: 140px;
     display: flex;
     justify-content: center;
-  
-  
+    cursor: pointer;
   }
   .prod-size span{
     margin: 2%;
