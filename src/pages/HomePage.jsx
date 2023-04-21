@@ -5,7 +5,7 @@
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom";
 
-function HomePage() {
+function HomePage({ setItems }) {
     return (
         <>
         <Link to="/products">
@@ -29,7 +29,7 @@ function HomePage() {
  <img className="homeImg" src={top4} />
  </div>
  </Link>
- <Footer/>
+ <Footer setItems={setItems} />
  </>
     )  
 }

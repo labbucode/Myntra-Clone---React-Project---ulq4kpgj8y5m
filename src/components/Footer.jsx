@@ -1,12 +1,22 @@
 import React from 'react'
 import "../Styles/footer.css"
+import data from "../data";
 import googlePlay from "../assets/googlePlay.png"
 import Appstore from "../assets/AppStore.png"
 import Social from "../assets/Social.png"
 import Guarantee from "../assets/Guarantee.png"
 import { Link } from "react-router-dom";
 
- function Footer(){
+ function Footer({ setItems }){
+    function handleNav(gender) {
+        if (gender === "all") {
+            setItems(data)
+        } else {
+            setItems(data.filter((ele) => {
+                return ele.gender === gender;
+            }))
+        }
+    }
 
     return (
         <>
@@ -17,9 +27,9 @@ import { Link } from "react-router-dom";
             <ul>
             <h3>Sitemap</h3>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">All </Link></li>
-            <li><Link to="/products">Men </Link></li>
-            <li><Link to="/products">Women </Link></li>
+            <li><Link to="/products" onClick={() => handleNav('all')}>All </Link></li>
+            <li><Link to="/products" onClick={() => handleNav('M')}>Men </Link></li>
+            <li><Link to="/products" onClick={() => handleNav('F')}>Women </Link></li>
             <li><Link to="/cart">Cart </Link></li>
           </ul>
           </div>
