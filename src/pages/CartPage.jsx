@@ -6,6 +6,7 @@ const CartPage = ({ cartItems, setCartItems }) => {
     
     return (
        <CartItems cartItems={cartItems} setCartItems={setCartItems} />
+      
     );
     
 }

@@ -1,9 +1,14 @@
 import React from 'react'
 import "../Styles/footer.css"
 import data from "../data";
+import {
+    FaFacebookF,
+    FaInstagram,
+    FaTwitter,
+    FaLinkedin,
+} from "react-icons/fa";
 import googlePlay from "../assets/googlePlay.png"
 import Appstore from "../assets/AppStore.png"
-import Social from "../assets/Social.png"
 import Guarantee from "../assets/Guarantee.png"
 import { Link } from "react-router-dom";
 
@@ -53,7 +58,20 @@ import { Link } from "react-router-dom";
                     <a href="https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059"> <img className="footericon2" src={Appstore} alt="" /></a>
                     </div>
                     <h5>KEEP IN TOUCH</h5>
-                   <a href='https://www.instagram.com/myntra/'><img src={Social} alt="" /></a> 
+                    <div className="socialIcons">
+                    <span className="icon" style={ {fontSize: '2em'} }>
+                        <FaFacebookF />
+                    </span>
+                    <span className="icon" style={ {fontSize: '2em'}}>
+                        <FaInstagram />
+                    </span>
+                    <span className="icon"  style={ {fontSize: '2em'}}>
+                        <FaTwitter />
+                    </span>
+                    <span className="icon"  style={ {fontSize: '2em'}}>
+                        <FaLinkedin />
+                    </span>
+                </div> 
                 </div>
                 <div>
                     <img className="footer4" src={Guarantee} alt="" />

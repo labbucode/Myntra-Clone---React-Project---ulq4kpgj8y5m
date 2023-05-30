@@ -6,11 +6,13 @@ export default function CartItems({ cartItems, setCartItems }){
         setCartItems([...newCartItems])
         localStorage.setItem('datas', JSON.stringify([...newCartItems]))
     }
+ 
     return (
         <>
             {cartItems.length === 0 ? (
                 <p className="emptyCart">Your Cart is Empty</p>
             ) : (
+                    <>
                 <ul className="cartsection">
                     {cartItems.map((item) => {
                         return (
@@ -39,6 +41,8 @@ export default function CartItems({ cartItems, setCartItems }){
                         );
                     })}
                 </ul>
+                   
+                    </>
             )}
         </>
     );

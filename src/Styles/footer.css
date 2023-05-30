@@ -2,7 +2,11 @@
     background-color: rgb(245 245 245);
     font-size: 100%;
 }
-
+.socialIcons{
+        position: relative;
+        top: 6px;
+        right: 9px;
+}
 
 
 .Footerclass{
