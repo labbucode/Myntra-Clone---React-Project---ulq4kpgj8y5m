@@ -37,9 +37,7 @@
     color: red;
     font-size: 1.2rem;
   }
-  .cartdescription .size{
-    margin-top: 20px;
-  }
+ 
   .cartdescription button{
     height: 5vh;
     width: 7vw;
@@ -47,5 +45,13 @@
     font-weight: 600;
     background-color: #ea405e;
     color: white;
-    margin: 30px 5px 0 5px;
+    margin: 4px 5px 0 5px;
+  }
+  .cartdescription .quantity button{
+  height: 22px;
+    width: 29px;
+    font-weight: 600;
+    background-color: #ea405e;
+    color: white;
+    border-radius: 48%;
   }
